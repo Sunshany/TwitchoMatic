@@ -7,19 +7,19 @@
   "description": "j'ecris ce qu'il faut",
 
   "browser_action": {
-    "default_icon": {                    
-            "19": "images/icon19.png",          
-            "38": "images/icon38.png"            
-                    },
-          "default_title": "Google Mail",     
-          "default_popup": "popup.html"       
-                    },
+    "default_icon": {
+      "19": "images/icon19.png",
+      "38": "images/icon38.png"
+    },
+    "default_title": "Google Mail",
+    "default_popup": "popup.html"
+  },
       
   "background_page": "TAMERE.html",
 
   "chrome_url_overrides" : {
     "pageToOverride": "MAPAGE.html"
-                           },
+  },
 
   "content_scripts": [
     {
@@ -27,23 +27,25 @@
       "css": ["mystyles.css"],
       "js": ["jquery.js", "myscript.js"]
     }
-                     ],
+  ],
 
   "file_browser_handlers": [
-          {
-            "id": "upload",
-            "default_title": "Save to Gallery",
-            "file_filters": [
-              "filesystem:*.jpg", 
-              "filesystem:*.jpeg",
-              "filesystem:*.png"
-                            ]
-          }
-                            ],  
-        "permissions" : [
-          "fileBrowserHandler"
-                        ],
-        "icons": { "16": "icon16.png",
-                   "48": "icon48.png",
-                  "128": "icon128.png" },
+    {
+      "id": "upload",
+      "default_title": "Save to Gallery",
+      "file_filters": [
+        "filesystem:*.jpg",
+        "filesystem:*.jpeg",
+        "filesystem:*.png"
+      ]
+    }
+  ],
+  "permissions" : [
+    "fileBrowserHandler"
+  ],
+  "icons": {
+    "16": "icon16.png",
+    "48": "icon48.png",
+    "128": "icon128.png"
+  },
 }
