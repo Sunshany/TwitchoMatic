@@ -1,0 +1,69 @@
+{
+  // Required
+  "manifest_version": 2,
+  "name": "My Extension",
+  "version": "versionString",
+
+  // Recommended
+  "default_locale": "en",
+  "description": "A plain text description",
+
+  // Pick one (or none)
+  "browser_action": {
+    "default_icon": {                    // optional
+            "19": "images/icon19.png",           // optional
+            "38": "images/icon38.png"            // optional
+          },
+          "default_title": "Google Mail",      // optional; shown in tooltip
+          "default_popup": "popup.html"        // optional
+        },
+      
+  // Add any of these that you need
+  "background_page": "TAMERE.html",
+
+  "chrome_url_overrides" : {
+    "pageToOverride": "MAPAGE.html"
+  },
+
+  "content_scripts": [
+    {
+      "matches": ["http://www.google.com/*"],
+      "css": ["mystyles.css"],
+      "js": ["jquery.js", "myscript.js"]
+    }
+  ],
+
+  "content_security_policy": "policyString",
+
+
+  "file_browser_handlers": [
+          {
+            "id": "upload",
+            "default_title": "Save to Gallery", // Ce que le bouton affichera
+            "file_filters": [
+              "filesystem:*.jpg", // Utiliser "filesystem:*.*" pour que ça correspondent
+              "filesystem:*.jpeg",
+              "filesystem:*.png"
+            ]
+          }
+        ],
+        "permissions" : [
+          "fileBrowserHandler" // HTML5 FileSystem API to get access to the file contents
+        ],
+        "icons": { "16": "icon16.png",
+                   "48": "icon48.png",
+                  "128": "icon128.png" },
+
+  "homepage_url": "http://path/to/homepage",
+  "incognito": "spanning" or "split",
+  "key": "publicKey",
+  "minimum_chrome_version": "versionString",
+  "nacl_modules": [...],
+  "offline_enabled": true,
+  "omnibox": { "keyword": "aString" },
+  "options_page": "aFile.html",
+  "permissions": [...],
+  "plugins": [...],
+  "update_url": "http://path/to/updateInfo.xml"
+
+        }
