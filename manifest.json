@@ -1,51 +1,12 @@
 {
   "manifest_version": 2,
-  "name": "TwitchhoMatic",
+  "name": "TwitchoMatic",
   "version": "0.0.1",
 
-  "default_locale": "en",
   "description": "j'ecris ce qu'il faut",
 
   "browser_action": {
-    "default_icon": {
-      "19": "images/icon19.png",
-      "38": "images/icon38.png"
-    },
-    "default_title": "Google Mail",
+    "default_title": "TwitchoMatic",
     "default_popup": "popup.html"
-  },
-      
-  "background_page": "TAMERE.html",
-
-  "chrome_url_overrides" : {
-    "pageToOverride": "MAPAGE.html"
-  },
-
-  "content_scripts": [
-    {
-      "matches": ["http://www.google.com/*"],
-      "css": ["mystyles.css"],
-      "js": ["jquery.js", "myscript.js"]
-    }
-  ],
-
-  "file_browser_handlers": [
-    {
-      "id": "upload",
-      "default_title": "Save to Gallery",
-      "file_filters": [
-        "filesystem:*.jpg",
-        "filesystem:*.jpeg",
-        "filesystem:*.png"
-      ]
-    }
-  ],
-  "permissions" : [
-    "fileBrowserHandler"
-  ],
-  "icons": {
-    "16": "icon16.png",
-    "48": "icon48.png",
-    "128": "icon128.png"
-  },
+  }
 }
