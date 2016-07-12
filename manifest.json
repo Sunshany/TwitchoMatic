@@ -17,7 +17,6 @@
       "css": ["aziz.css"],
       "js": ["jquery.js", "myscript.js"]
     }
-  ]
+  ],
 }
-
 }
