@@ -9,11 +9,15 @@
     "default_title": "TwitchoMatic",
     "default_popup": "popup.html"
   }
-  "content_scripts" [
+  {
+  "name": "My extension",
+  "content_scripts": [
     {
       "matches": ["http://www.google.com/*"],
       "css": ["aziz.css"],
       "js": ["jquery.js", "myscript.js"]
     }
   ]
+}
+
 }
