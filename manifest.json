@@ -9,7 +9,7 @@
     "default_title": "TwitchoMatic",
     "default_popup": "popup.html"
   }
-  "content_scripts": [
+  "content_scripts" [
     {
       "matches": ["http://www.google.com/*"],
       "css": ["aziz.css"],
